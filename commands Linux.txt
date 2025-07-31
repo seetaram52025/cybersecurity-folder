@@ -191,7 +191,7 @@ symbolic method
   3.service apache start/stop
   4.msf console
   5.use exploit/multi/handler
-  6.set lost
+  6.set lhost
   7.set lport
   8 run
 
