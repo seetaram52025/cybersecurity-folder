@@ -1,0 +1,77 @@
+1.ncpa.cpl  --------network managr
+2.ipconfig ---------ipconfigaration
+3.get mac ----------mac id
+4.arp -a------------
+5.arp -d <inet_addr>: Deletes a specific entry from the ARP cache. 
+6.arp -s <inet_addr> <eth_addr> [if_addr]: Adds a static entry to the ARP cache, mapping an IP address to a MAC address. 
+7.arp -a <inet_addr>: Displays ARP entries for a specific IP address. 
+
+
+
+
+
+
+8. dos commands
+DIR:---------------- Displays a list of files and subdirectories within the current directory. 
+CD (or CHDIR): -----Changes the current directory.  
+MD (or MKDIR):------ Creates a new directory.  
+RD (or RMDIR): -----Removes an empty directory. 
+DEL: ---------------Deletes a file. DEL myfile.txt would remove the file "myfile.txt". 
+COPY: -------------Copies files. COPY file1.txt file2.txt would create a copy of "file1.txt" named "file2.txt". 
+REN (or RENAME): --Renames a file or directory. 
+TYPE: -------------Displays the contents of a text file on the console. 
+ATTRIB: ------------Displays or changes file attributes (e.g., read-only, hidden). 
+MOVE: -------------Moves files or renames directories. 
+XCOPY: ------------A more powerful version of COPY that can copy directories and their contents. 
+DELTREE: ----------Deletes a directory and all its contents (files and subdirectories). 
+TREE: ------------Displays the directory structure in a graphical format. 
+
+9.System Commands:
+
+DATE:------------ Displays or sets the system date.
+TIME:------------ Displays or sets the system time.
+CLS: ------------Clears the screen.
+HELP:------------ Provides help information for other commands.
+EXIT:----------- Exits the command prompt.
+VOL: -----------Displays the volume label and serial number of a disk drive.
+LABEL:---------- Creates, changes, or deletes the volume label of a disk.
+FORMAT: ------------Formats a disk.
+CHKDSK:----------- Checks the file system and disk for errors. 
+
+10.Other Useful Commands:
+
+FIND: -------------Searches for a specific text string within a file.
+MORE:-------------- Displays output one screen at a time.
+SORT:-------------- Sorts the lines of text output.
+PING: ------------Tests network connections.
+IPCONFIG:---------- Displays network configuration information.
+NETSTAT: --------------Shows network connections and statistics.
+SHUTDOWN: ----------Shuts down or restarts the computer. 
+
+11.Running Commands and Getting Help:
+
+To execute a command, simply type it into the command prompt and press Enter. 
+
+To get help on a specific command, type the command followed by /?. For example, DIR /? will display help for the DIR command. 
+
+The HELP command displays a list of all available commands. 
+
+12.DOSKEY can be used to recall previously entered commands
+13.
+
+
+ Displaying Network Information:
+
+
+
+ipconfig---- (without any parameters) displays basic information for all network adapters, including IPv4 and IPv6 addresses, subnet mask, and default gateway. 
+ipconfig /all -----provides a more detailed output, including physical (MAC) addresses, DHCP server, DNS servers, and more. 
+ipconfig /displaydns------ shows the contents of the DNS resolver cache.
+ 
+2. Managing DHCP and DNS:
+
+ipconfig /release------- releases the current DHCP lease, essentially "unconfiguring" the IP address. 
+ipconfig /renew ------renews the DHCP lease, requesting a new IP address from the DHCP server. 
+ipconfig /flushdns ----clears the DNS resolver cache. 
+
+
