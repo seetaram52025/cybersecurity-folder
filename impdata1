@@ -1,0 +1,17 @@
+APEC IT Training
+3:30 PM
+airmon-ng start waln0
+APEC IT Training
+3:43 PM
+airodump-ng --band a wlan0
+APEC IT Training
+3:45 PM
+airodump-ng --bssid (mac add) --channel 2 --write awstest enp0s3(usered)
+airodump-ng --bssid MACADDRESS --channel 1 --write test enp0s3
+aircrack-ng
+
+
+
+ifconfig wlan0 hw ether (mac address)
+ 
+
